@@ -10,8 +10,9 @@ source:
   sha256: 63bc87e251dbf788dcc8a45e58482ea09b26d05957bf50c77c684d5f0972a495
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
+
 
 requirements:
   host:
@@ -19,6 +20,18 @@ requirements:
     - python
   run:
     - python
+test:
+  # Python imports
+  imports:
+    - multiqc
+    - multiqc.modules
+    - multiqc.plots
+    - multiqc.templates
+    - multiqc.utils
+
+  commands:
+    - multiqc --version
+    - multiqc .
 
 about:
   home: The package home page
@@ -31,4 +44,7 @@ about:
 
 extra:
   recipe-maintainers:
-    - your-github-id-here
+    - tizio
+  skip-lints:
+    - uses_setuptools # uses pkg_resources
+
