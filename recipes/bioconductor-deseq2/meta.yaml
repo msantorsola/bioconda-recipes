@@ -36,6 +36,7 @@ requirements:
     - r-rcpparmadillo
     - libblas
     - liblapack
+    - python
   run:
     - 'bioconductor-biobase >=2.62.0,<2.63.0'
     - 'bioconductor-biocgenerics >=0.48.0,<0.49.0'
