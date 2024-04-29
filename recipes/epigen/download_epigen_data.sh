@@ -7,7 +7,7 @@ set -x
 
 if [[ -z "$1" ]]; then
     echo
-    echo "Download EpiGEN data to <outdir>"
+    echo "Downloading EpiGEN data"
     echo "Usage: $0 <outdir>"
     echo
     exit 1
@@ -27,14 +27,19 @@ cd epigen-e1c4a4ee97b7dda5beb12be2eaeb5069a479b43f
 mv $TMP/epigen-e1c4a4ee97b7dda5beb12be2eaeb5069a479b43f/ext/HAPMAP3 $OUTDIR
 mv $TMP/epigen-e1c4a4ee97b7dda5beb12be2eaeb5069a479b43f/corpora $OUTDIR
 
-echo "Download HAPGEN2"
+
+echo "Downloading HAPGEN2"
 #linux
-wget https://mathgen.stats.ox.ac.uk/genetics_software/hapgen/download/builds/x86_64/v2.2.0/hapgen2_x86_64.tar.gz
-tar -xf  hapgen2_x86_64.tar.gz
+wget --no-check-certificate  https://mathgen.stats.ox.ac.uk/genetics_software/hapgen/download/builds/x86_64/v2.2.0/hapgen2_x86_64.tar.gz
+tar -xf  hapgen2_x86_64.tar.gz -O  hapgen2_macosx_intel.tar.gz
 mv $TMP/hapgen2 $OUTDIR/ext/HAPGEN2/Linux
 
 #macos
-wget https://mathgen.stats.ox.ac.uk/genetics_software/hapgen/download/builds/macosx_intel/v2.2.0/hapgen2_macosx_intel.tar.gz
-tar -xf hapgen2_macosx_intel.tar.gz
+wget --no-check-certificate https://mathgen.stats.ox.ac.uk/genetics_software/hapgen/download/builds/macosx_intel/v2.2.0/hapgen2_macosx_intel.tar.gz
+tar -xf hapgen2_macosx_intel.tar.gz -O  hapgen2_macosx_intel.tar.gz
 mv $TMP/hapgen2 $OUTDIR/ext/HAPGEN2/Linux
+
+
+echo "Done."
+exit 0
 
