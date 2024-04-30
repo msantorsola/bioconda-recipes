@@ -44,6 +44,18 @@ tar -xf hapgen2_macosx_intel.tar.gz
 mv $TMP/epigen-e1c4a4ee97b7dda5beb12be2eaeb5069a479b43f/hapgen2 $OUTDIR/ext/HAPGEN2/Darwin
 
 
-echo "Done."
-exit 0
+# Check files exist
+for tst in \
+	$OUTDIR/HAPMAP3/ASW.chr21.hap.bz2 \
+	$OUTDIR/corpora/21_TSI_snps.json.bz2 \
+; do
+    	fn=$OUTDIR/$tst
+        if [[ ! -e $fn ]]; then
+		echo "$fn does not exist"
+		exit 1
+	else
+		echo "$fn exists"
+	fi
+done
+
 
