@@ -32,7 +32,7 @@ echo "Downloading HAPGEN2"
 #linux
 wget --no-check-certificate  https://mathgen.stats.ox.ac.uk/genetics_software/hapgen/download/builds/x86_64/v2.2.0/hapgen2_x86_64.tar.gz -O hapgen2_x86_64.tar.gz
 tar -xf  hapgen2_x86_64.tar.gz 
-mv $TMP/hapgen2 $OUTDIR/ext/HAPGEN2/Linux
+mv $TMP/epigen-e1c4a4ee97b7dda5beb12be2eaeb5069a479b43f/hapgen2 $OUTDIR/ext/HAPGEN2/Linux
 
 
 wait 
@@ -41,7 +41,7 @@ wait
 #macos
 wget --no-check-certificate https://mathgen.stats.ox.ac.uk/genetics_software/hapgen/download/builds/macosx_intel/v2.2.0/hapgen2_macosx_intel.tar.gz -O hapgen2_macosx_intel.tar.gz
 tar -xf hapgen2_macosx_intel.tar.gz 
-mv $TMP/hapgen2 $OUTDIR/ext/HAPGEN2/Darwin
+mv $TMP/epigen-e1c4a4ee97b7dda5beb12be2eaeb5069a479b43f/hapgen2 $OUTDIR/ext/HAPGEN2/Darwin
 
 
 echo "Done."
