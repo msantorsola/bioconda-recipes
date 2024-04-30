@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/msantorsola/epigen/archive/e1c4a4ee97b7dda5beb12be2eaeb5069a479b43f.zip
-  sha256: 55ae22238066c270bfee220245abd633f0985c694418dccec966a56fcfae595d 
+  url: https://github.com/msantorsola/epigen/archive/3656639a9d05ccb431e99ef6de57b7d0c893df64.zip
+  sha256: 84b9d415802d637ff117297576a94b2738485a5f4d616ff8fa2bba4fabd2a615 
   #patches: patches
 
 build:

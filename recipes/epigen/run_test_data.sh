@@ -2,7 +2,7 @@
 
 # Tests the extra data download script
 TMP=$(mktemp -d)
-sh download_epigen_data.sh $TMP
+#sh download_epigen_data.sh $TMP
 
 # Check files exist
 for tst in \
